@@ -9,7 +9,7 @@ playagain = "Y" #Stores whether the user wishes to play again
 while playagain == "Y":
     #User input is given
     num_days = eval(input("Enter how many days are in the month: ")) #Stores number of days in month
-    first_day = eval(input("Enter the first day of the month (Sun = 0... Sat = 6): ")) #Stores
+    first_day = eval(input("Enter the first day of the month (Sun = 0... Sat = 6): ")) #Stores first day as a integer
 
     #Prints the days of the week in the correct format
     print(" "*2, format("Sun", "5s"), end = "")
@@ -24,13 +24,13 @@ while playagain == "Y":
     print("\n", 35*"-", "\n", " "*(first_day*5), end = "", sep = "")
 
     #For loop for printing the days
-    for i in range(1,num_days+1):
-        print(format(i, "5d"), end = "")
-        if (i+first_day)%7 == 0: #If the day + first day is divisible by 7
+    for day in range(1,num_days+1):
+        print(format(day, "5d"), end = "")
+        if (day+first_day)%7 == 0: #If the day + first day is divisible by 7
             print("\n", end="") #Jump to next line
 
     #Prompt user if they wish to make another calendar
-    playagain = input("\nWould you like to do another calendar? (Y or N): ")  
+    play_again = input("\nWould you like to do another calendar? (Y or N): ")  
 
 
 
