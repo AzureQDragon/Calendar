@@ -1,6 +1,7 @@
 #Daniel Moon
 #Psuedo blackjack cardgame
 #Project #2
+#10/8/19
 
 import random
 
@@ -106,16 +107,15 @@ def cmpcards(Player1, Player2):
         output = ""     #No output for a tie
     return output
 
-#Main blackjack function takes in 2 players and deck to change
+#Main blackjack function takes in 2 players and deck
 def blackjack(Player1, Player2, deck):
 
-    #Loops until playagain is false and has a counter that allows the player list
-    #to alternate from Player 1 to Player 2 being the first to be prompted
     playagain = True
     counter = 0 
     playerlist = [Player1, Player2] 
     resetdeck(deck)
-    #Game Loops until one player runs out of money
+    
+    #Game Loops until one player runs out of money and alternates between Player1 and Player2
     while playagain == True:
 
         #First round of drawing cards with output of balance and hand
