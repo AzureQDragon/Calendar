@@ -70,6 +70,7 @@ class Player():
 def resetdeck(deck):
     for i in range(52): 
         deck.append(False)
+    return
 
 #Generates a new card between 1 and 52
 def newcard():
@@ -177,6 +178,7 @@ def blackjack(Player1, Player2, deck):
         if Player2.getbalance() <= 0:
             print(Player1.getname() + "Wins the Game!")
             playagain = False
+    return
 
 
 #Main Function
@@ -192,6 +194,7 @@ def main():
 
     #Place two objects in the blackjack function
     blackjack(Player1, Player2, carddeck) 
+    return
 
 main()
      
