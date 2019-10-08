@@ -91,7 +91,7 @@ def cmpcards(Player1, Player2):
     cardsum2 = 0        #Sum from player 2
     output = ""     
 
-    #Calccounterlates the value of each card
+    #Calculates the value of each card
     for i in Player1.gethand("Player1"):
         cardsum1 += i%13
     for i in Player2.gethand("Player2"):
@@ -141,7 +141,7 @@ def blackjack(Player1, Player2, deck):
             playerlist[counter%2].balancechange(1)
             print(playerlist[counter%2].getname(), "Wins!")
 
-            #Second round of drawing cards with output of hand
+        #Second round of drawing cards with output of hand
         else: 
             draw(Player1, 1, deck)
             draw(Player2, 1, deck)
@@ -160,7 +160,7 @@ def blackjack(Player1, Player2, deck):
             else:
                 print("It was a tie!\n")
 
-        #TWo cards are cleared from hands
+        #Two cards are cleared from hands
         Player1.clearhand()
         Player2.clearhand()
 
